@@ -18,3 +18,5 @@
 2015-08-27T02:19:28.489408369Z Can't open the log file: Permission denied
 ```
 
+运行时，不挂载 `-v /var/log/redis:/var/log/redis` 这个，就不会输出没有权限操作日志文件， 但是服务还是没有正常的启动。
+
