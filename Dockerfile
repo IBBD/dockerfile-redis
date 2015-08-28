@@ -23,5 +23,9 @@ MAINTAINER Alex Cai "cyy0523xc@gmail.com"
 
 #CMD ["redis-server", "/usr/local/etc/redis/redis.conf"]
 
+# 解决时区问题
+env TZ "Asia/Shanghai"
+
+
 EXPOSE 6379
 
