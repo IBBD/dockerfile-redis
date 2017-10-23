@@ -7,13 +7,7 @@
 
 ## 安装
 
-- 从dockerfile安装：`sudo ./build.sh`
-- 从hub.docker.com下载：`sudo docker pull ibbd/mariadb`
-
-## 使用
-
-见：`./run.sh`
-
+- 从hub.docker.com下载：`sudo docker pull ibbd/redis`
 
 ## 踩过的坑
 
