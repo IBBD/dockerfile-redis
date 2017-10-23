@@ -11,21 +11,13 @@ FROM redis:latest
 
 MAINTAINER Alex Cai "cyy0523xc@gmail.com"
 
-# Define mountable directories.
-#RUN mkdir -p /var/log/redis
-#RUN chown -R redis:redis /var/log/redis
-#VOLUME ["/var/log/redis"]
-#VOLUME /var/lib/redis
-
-# 使用自定义配置文件
-#COPY conf/redis.conf /usr/local/etc/redis/redis.conf
-#COPY conf/redis.conf /etc/redis/redis.conf
-
-#CMD ["redis-server", "/usr/local/etc/redis/redis.conf"]
-
+RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+  
 # 解决时区问题
-env TZ "Asia/Shanghai"
+ENV TZ "Asia/Shanghai"
 
+# 终端设置
+# 默认值是dumb，这时在终端操作时可能会出现：terminal is not fully functional
+ENV TERM xterm
 
 EXPOSE 6379
-
