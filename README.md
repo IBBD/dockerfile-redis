@@ -9,6 +9,12 @@
 
 - 从hub.docker.com下载：`sudo docker pull ibbd/redis`
 
+## 运行
+
+```sh
+docker run -v /myredis/conf/redis.conf:/usr/local/etc/redis/redis.conf --name ibbd-redis ibbd/redis redis-server /usr/local/etc/redis/redis.conf
+```
+
 ## 踩过的坑
 
 一直报日志文件没有写入权限的问题。。
